@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    font-family: Verdana, Geneva, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Verdana, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Verdana, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Verdana, Geneva, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Verdana, Geneva, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; 
+
+}
+
+/* NAVIGATION */
+.nav-main {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+.nav-main-header {
+    background-color: #3F4A51;
+    opacity: 0.95;
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+    
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-main-header li {
+    min-width: 20px;
+}
+.nav-main-header li a {
+    text-decoration: none;
+    color: #B124DB;
+}
+.nav-main-header li a:hover {
+    color: #b124b1;
+}
+
+
+/* sidebar navigation */
+
+.side-bar {
+    position: absolute;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    min-width: 20vw;
+    min-height: 100vh;
+    background-color: black;
+
+    display: flex;
+
+    align-items: center;
+    padding-left: 1vw;
+}
+
+/* header for crops */
+
+.nav-header-crop {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* wiki page */
+
+.wiki-content {
+    background-color: #A9A9A9;
+    height: 100vh;
+}
+
+
