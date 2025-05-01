@@ -20,10 +20,15 @@ html, body {
     font-family: 'Blackcraft', sans-serif;
     font-size: 2vw;
     height: fit-content;
+    transition: transform 0.3s ease;
 }
+.hide {
+    transform: translateY(-100%);
+}
+
 .nav-main-header {
     background-color: #3F4A51;
-
+    transition: transform 0.3s ease;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -128,6 +133,24 @@ html, body {
     padding: 20px;
     margin-top: 10vh;
     flex: 1;
+}
+
+.wiki-page-content section {
+    min-height: 100vh;
+}
+
+
+/* content */
+.content-heading {
+    font-size: 3vw;
+}
+.content-subheading {
+    font-size: 2vw;
+    padding: 1vw;
+}
+.content-text {
+    font-size: 1vw;
+    padding: 0vw 2vw;
 }
 
 

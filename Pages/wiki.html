@@ -6,6 +6,20 @@
     <title>Wiki</title>
     <link rel="stylesheet" href="../Styles/wiki-styles.css"/>
 </head>
+<script>
+    const navbar = document.getElementById('nav-main-header');
+    let lastScrollY = window.scrollY;
+  
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 0) {
+            navbar.classList.add('hide');
+        }
+        else {
+            navbar.classList.remove('hide');
+        }
+        lastScrollY = window.scrollY;
+    });
+  </script>
 <body>
     <div class="page-transition">
         <img src="../Assets/Background/black.jpg"/>
@@ -25,7 +39,7 @@
                 </h1>
                 <section>
                     <ul class="topic-section" id="crop">
-                        <li><a class="subsection" href="#">Introduction to Crops</a></li>
+                        <li><a class="subsection" href="#crops">Introduction to Crops</a></li>
                         <li><a class="subsection" href="#">About Crop qualities</a></li>
                         <li><a class="subsection" href="#">Crop List</a></li>
                     </ul>
@@ -35,7 +49,7 @@
                 </h1>
                 <section>
                     <ul class="topic-section" id="artifact">
-                        <li><a class="subsection" href="#">Introduction to Artifacts</a></li>
+                        <li><a class="subsection" href="#artifacts">Introduction to Artifacts</a></li>
                         <li><a class="subsection" href="#">About Artifact qualities</a></li>
                         <li><a class="subsection" href="#">Artifact List</a></li>
                     </ul>
@@ -53,7 +67,7 @@
             </nav>
         </nav>
         <div class="wiki-page-content">
-            <section>
+            <section id="crops">
                 <h1 class="content-heading">
                     Crops
                 </h1>
@@ -62,11 +76,38 @@
                         Introduction to Crops
                     </h2>
                     <div class="content-content">
-                        <p>
+                        <p class="content-text">
                             In Shatterfarms, a crop is a ...
                         </p>
                     </div>
                 </div>
+                <br>
+                <div>
+                    <h2 class="content-subheading">
+                        About Crop qualities
+                    </h2>
+                    <div class="content-content">
+                        <p class="content-text">
+                            There are N different types of crop qualities, as well as an N variety of 
+                            powerups, or boons, provided by each unique crop.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="artifacts">
+                <h1 class="content-heading">
+                    Artifacts
+                </h1>
+                <div>
+                    <h2 class="content-subheading">
+                        Introduction to Crops
+                    </h2>
+                    <div class="content-content">
+                        <p class="content-text">
+                            In Shatterfarms, a crop is a ...
+                        </p>
+                    </div>
+                </div>                
             </section>
         </div>
     </div>
