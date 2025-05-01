@@ -19,7 +19,6 @@ html, body {
 }
 .nav-main-header {
     background-color: #3F4A51;
-    opacity: 0.95;
 
     list-style: none;
     display: flex;
@@ -46,10 +45,10 @@ html, body {
 
 .side-bar {
     position: absolute;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     min-width: 20vw;
     min-height: 100vh;
-    background-color: black;
+    background-color: #343a3d;
 
     display: flex;
 
@@ -63,12 +62,24 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-
+.nav-header-crop-title {
+    color: white;
+}
+.crop {
+    padding-top: 6px;
+    padding-left: 1vw;
+    list-style: none;
+}
+.crop li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.5em;
+}
 
 /* wiki page */
 
 .wiki-content {
-    background-color: #A9A9A9;
+    background-color: #3F4A51;
     height: 100vh;
 }
 
