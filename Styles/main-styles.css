@@ -39,10 +39,12 @@ h1 {
     
     justify-content: space-around;
     align-items: center;
+    transform: scale(0.5);
 }
 .nav-main-header li {
     min-width: 20px;
     transition: transform 0.3s ease;
+    
 }
 .nav-main-header li a {
     text-decoration: none;

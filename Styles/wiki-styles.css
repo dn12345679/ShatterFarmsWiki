@@ -33,13 +33,17 @@ html, body {
     justify-content: space-around;
     align-items: center;
 
+    height: 10vh;
+
 }
 .nav-main-header li {
     min-width: 20px;
+    transform: scale(0.8);
 }
 .nav-main-header li a {
     text-decoration: none;
     color: #B124DB;
+    
 }
 .nav-main-header li a:hover {
     color: #b124b1;
@@ -49,8 +53,10 @@ html, body {
 /* sidebar navigation */
 
 .side-bar {
-    position: absolute;
+    position: relative;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+    width: fit-content;
     min-width: 20vw;
     min-height: 100vh;
     background-color: #343a3d;
@@ -58,6 +64,7 @@ html, body {
     display: flex;
     padding-left: 1vw;
     font-size: 30px;
+    overflow-y: auto;
 }
 
 /* header for crops */
@@ -65,21 +72,27 @@ html, body {
 .nav-header-crop {
     display: flex;
     flex-direction: column;
-    margin-top: 140px;
+    margin-top: 15vh;
 }
 .nav-header-crop-title {
     color: white;
+    margin-top: 6px;
 }
-.crop {
+
+.topic-section {
+    list-style: none;
+}
+
+.subsection {
     padding-top: 6px;
     padding-left: 1vw;
-    list-style: none;
-    
-}
-.crop li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.subsection:hover {
+    border-style:inset; 
 }
 
 /* wiki page */
@@ -87,6 +100,16 @@ html, body {
 .wiki-content {
     background-color: #3F4A51;
     height: 100vh;
+    display: flex;
+}
+
+/* wiki-scroll-content */
+
+.wiki-page-content {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10vh;
+    flex: 1;
 }
 
 
