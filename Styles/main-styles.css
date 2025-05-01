@@ -1,3 +1,5 @@
+@import url('global-styles.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +10,13 @@ html, body {
     scroll-behavior: smooth;
     height: 200vh;
 
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'SpecialElite', sans-serif;
 
+}
+
+/* general style */
+h1 {
+    color: white;
 }
 
 /* NAVIGATION */
@@ -17,6 +24,8 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 999;
+    font-family: 'Blackcraft', sans-serif;
+    font-size: 80px;
 }
 .nav-main-header {
     background-color: #3F4A51;
@@ -33,14 +42,28 @@ html, body {
 }
 .nav-main-header li {
     min-width: 20px;
+    transition: transform 0.3s ease;
 }
 .nav-main-header li a {
     text-decoration: none;
     color: #B124DB;
+    
+    
 }
-.nav-main-header li a:hover {
+.nav-main-header li:hover {
     color: #b124b1;
+    transform: rotate(-7deg) scale(1.05);
 }
+
+
+
+.plimbo:hover {
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
 
 
 /* Main Content */
@@ -81,7 +104,7 @@ html, body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: rgb(16, 15, 15);
     top: 100vh;
 }
 
@@ -90,6 +113,7 @@ html, body {
     font-size: 50px;
     line-height: 100%;
     text-align: center;
+    color: white;
 }
 
 .downloads {
@@ -97,23 +121,23 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: white;
 }
 
 .download-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .download-button {
     margin-top: 20px;
 
     height: 12vh;
-    background-color: grey;
 }
 .icon {
     height: 12vh;
+    transition: transform 0.3s ease;
 }
 .social-page {
     display: flex;
@@ -126,6 +150,13 @@ html, body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 20px;
+}
+
+/* animations */
+
+.icon:hover {
+    transform: scale(1.2);
 }
 
 
