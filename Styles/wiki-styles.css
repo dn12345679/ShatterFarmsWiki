@@ -188,6 +188,7 @@ html, body {
     border-color: white;
 
     border-spacing: 20px;
+    margin: 5vh;
 }
 
 .item-table-header-row {
@@ -203,5 +204,6 @@ html, body {
     border-radius: 5px;
     border-color: white;
 }
+
 
 
