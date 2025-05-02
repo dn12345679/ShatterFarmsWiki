@@ -31,6 +31,10 @@ h1 {
     background-color: #3F4A51;
     opacity: 0.95;
 
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 3px;
+
     list-style: none;
     display: flex;
     flex-direction: row;

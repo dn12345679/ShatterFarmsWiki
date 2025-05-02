@@ -77,6 +77,11 @@ html, body {
 
 .side-bar {
     position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
+
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
     width: fit-content;
@@ -121,18 +126,32 @@ html, body {
 /* wiki page */
 
 .wiki-content {
-    background-color: #3F4A51;
-    height: 100vh;
+
+    z-index: 2;
+    height: auto;
     display: flex;
+    position: relative;
 }
 
 /* wiki-scroll-content */
 
+.bg {
+    
+    z-index: 1;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    background-image: url("../Assets/Background/wiki-bg.jpg");
+    opacity: 0.8;
+    background-repeat: repeat;
+}
+
 .wiki-page-content {
-    background-color: white;
+
     padding: 20px;
     margin-top: 10vh;
     flex: 1;
+    min-height: 100vh;
 }
 
 .wiki-page-content section {
@@ -140,7 +159,13 @@ html, body {
 }
 
 
+
 /* content */
+#content-font {
+    color: white;
+    z-index: 2;
+}
+
 .content-heading {
     font-size: 3vw;
 }
@@ -149,8 +174,34 @@ html, body {
     padding: 1vw;
 }
 .content-text {
+    line-height: 1.5;
     font-size: 1vw;
-    padding: 0vw 2vw;
+    padding: 2vw 2vw;
+}
+
+
+/* tables */
+
+.item-table {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+
+    border-spacing: 20px;
+}
+
+.item-table-header-row {
+    color: #B124DB;
+    
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.item-table-main-row {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
 }
 
 
