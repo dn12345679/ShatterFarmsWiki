@@ -141,7 +141,8 @@ html, body {
     min-width: 100vw;
     min-height: 100vh;
     position: fixed;
-    background-image: url("../Assets/Background/wiki-bg.jpg");
+    /* background-image: url("../Assets/Background/wiki-bg.jpg"); */
+    background-color: black;
     opacity: 0.8;
     background-repeat: repeat;
 }

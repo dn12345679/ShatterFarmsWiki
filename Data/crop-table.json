@@ -5,7 +5,7 @@
         "genesisName": "Closer Thorn",
         "rarity": "Rudimentary",
         "category": "Cactus",
-        "cultivesAbility": "Summon",
+        "cultivesAbility": "Summon (Thorn)",
         "attributeValue": "+1 \"Thorn\"",
         "description": "Spawn a Thorn when attacking an Enemy within 15m. CD: 3s"
       },
@@ -14,9 +14,217 @@
         "genesisName": "Grounding Call",
         "rarity": "Rudimentary",
         "category": "Cactus",
-        "cultivesAbility": "Damage, Gravity",
+        "cultivesAbility": "Damage (Gravity)",
         "attributeValue": "+10% All Damage, 1.1x Gravity Multiplier",
         "description": "Increases Character weight and increases damage output"
+      },
+      {
+        "cropID": 3,
+        "genesisName": "Hive Slicer",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Summon (Hive)", 
+        "attributeValue": "+1 'Hive Nest'",
+        "description": "On Kill, Summon a Hive Nest that deals damage to both you and enemies."
+      },
+      {
+        "cropID": 4,
+        "genesisName": "Kill Spine",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Damage (Explosion)", 
+        "attributeValue": "Death Damage +1500%",
+        "description": "Every 45s, The next kill Spawns a Devastating Blast."
+      },
+      {
+        "cropID": 5,
+        "genesisName": "Streak of Willows",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Damage (Weakness)", 
+        "attributeValue": "All Damage +15%, All Damage -50% for 15s after taking damage",
+        "description": "Deal 15% more Damage. Taking damage halves your damage output for 15s."
+      },
+      {
+        "cropID": 6,
+        "genesisName": "Tetrabreak",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Shockwave Damage +500%", 
+        "attributeValue": "Damage (Shockwave)",
+        "description": "Slamming onto the ground causes a Shockwave"
+      },
+      {
+        "cropID": 7,
+        "genesisName": "Translucent Thistle",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Damage (Senility)", 
+        "attributeValue": "All Damage +20% per Cultive Level. Max HP -50%",
+        "description": "Gain 20% Damage per level. Permanently reduce max health by half."
+      },
+
+      {
+        "cropID": 8,
+        "genesisName": "Anti Spores",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Slowness)", 
+        "attributeValue": "Spores: Slow Enemies by 50% per stack. Enemy Armor reduces on contact. Effect duration: 6s",
+        "description": "When taking damage, Drop spores that slows and reduces enemy armor."
+      },
+      {
+        "cropID": 9,
+        "genesisName": "Blue Capillary",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Absorption)", 
+        "attributeValue": "Absorb 10% All Damage as Mana Damage",
+        "description": "A portion of all damage taken is instead treated as damage taken from Mana"
+      },
+      {
+        "cropID": 10,
+        "genesisName": "Crust Core",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Adaptation)", 
+        "attributeValue": "+40% Damage Reduction on Kill. Duration: 5s",
+        "description": "When defeating an enemy, take 40% less damage for 5 seconds."
+      },
+      {
+        "cropID": 11,
+        "genesisName": "Fillings",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Vitality)", 
+        "attributeValue": "Heal +100% Max HP and increase Max HP by 15%",
+        "description": "Increase maximum Health by 15%."
+      },
+      {
+        "cropID": 12,
+        "genesisName": "Floras Investment",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Slow Recovery)", 
+        "attributeValue": "+60% Max HP, -30% Healing Rate",
+        "description": "Increase Maximum Health and decrease healing."
+      },
+      {
+        "cropID": 13,
+        "genesisName": "Fogged Fallen",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Blocked)", 
+        "attributeValue": "+Smoke and increased knockback",
+        "description": "While 'Slamming', generate a 'Smoke' that pushes enemies away slightly"
+      },
+      {
+        "cropID": 14,
+        "genesisName": "Insplice Opportunity",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Defense (Cripple)", 
+        "attributeValue": "Enemy Armor -50% for Xs",
+        "description": "On pickup, decrease all Enemy Armor by 50% temporarily"
+      },
+      {
+        "cropID": 15,
+        "genesisName": "Mind Drill",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Tendril)", 
+        "attributeValue": "'Tendril' effect: Enemies take X% increased knockback for a while.",
+        "description": "On Hit, Generate a Tendril that pulls the nearest enemy towards you. 'Drilled' Enemies take drastically increased knockback."
+      },
+      {
+        "cropID": 16,
+        "genesisName": "Activating Bloom",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Sprint)", 
+        "attributeValue": "+40% Movement Speed for 8s",
+        "description": "Gain 40% movement speed after exiting the 'Farm' Area"
+      },
+      {
+        "cropID": 17,
+        "genesisName": "Calyx Tanks",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Hyperfocus)", 
+        "attributeValue": "+25% Max Mana, Healing rate -15%",
+        "description": "Increase Maximum Mana and decrease healing."
+      },
+      {
+        "cropID": 18,
+        "genesisName": "Flutter Kicks",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Divekick)", 
+        "attributeValue": "+1 Midair Jump",
+        "description": "On kill, if not on the ground, gain an extra jump"
+      },
+      {
+        "cropID": 19,
+        "genesisName": "Mage Leaf",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Power)", 
+        "attributeValue": "Max Mana recovered +100%, Increase Max Mana by 10%",
+        "description": "Increase Maximum Mana"
+      },
+      {
+        "cropID": 20,
+        "genesisName": "Activating Bloom",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Defense (Slow Recovery)", 
+        "attributeValue": "+60% Max HP, -30% Healing Rate",
+        "description": "Increase Maximum Health and decrease healing."
+      },
+      {
+        "cropID": 21,
+        "genesisName": "Purple Waters",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Slowness)", 
+        "attributeValue": "Projectile Slowing Field",
+        "description": "Gain a barrier that slows projectiles"
+      },
+      {
+        "cropID": 22,
+        "genesisName": "Padding Leaf",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Lilies)", 
+        "attributeValue": "'Lily Pad': Gain movement speed and restore mana",
+        "description": "Every 15 seconds, summon a 'Lily Pad'"
+      },
+      {
+        "cropID": 23,
+        "genesisName": "Petal Pores",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Extraction)", 
+        "attributeValue": "Mana Spheres spawn on kill",
+        "description": "Striking Enemies with over 80% health will generate a 'Mana Sphere'"
+      },
+      {
+        "cropID": 24,
+        "genesisName": "Watercress Connection",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Conservation)", 
+        "attributeValue": "+15% Mana Efficiency",
+        "description": "Gain 15% Mana Efficiency while Sliding"
+      },
+      {
+        "cropID": 25,
+        "genesisName": "Winds Meditative",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Charge)", 
+        "attributeValue": "+Movement Speed while stationary",
+        "description": "Standing still slowly charges up movement speed"
       }
     ]
   }
