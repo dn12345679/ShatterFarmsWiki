@@ -1,0 +1,22 @@
+{
+    "crops": [
+      {
+        "cropID": 1,
+        "genesisName": "Closer Thorn",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Summon",
+        "attributeValue": "+1 \"Thorn\"",
+        "description": "Spawn a Thorn when attacking an Enemy within 15m. CD: 3s"
+      },
+      {
+        "cropID": 2,
+        "genesisName": "Grounding Call",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Damage, Gravity",
+        "attributeValue": "+10% All Damage, 1.1x Gravity Multiplier",
+        "description": "Increases Character weight and increases damage output"
+      }
+    ]
+  }

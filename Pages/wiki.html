@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki</title>
     <link rel="stylesheet" href="../Styles/wiki-styles.css"/>
+
+    <script src="../Scripts/json-to-table.js"></script> <!--IMPORTANT: Loads tables-->
 </head>
 <script>
     const navbar = document.getElementsByClassName('nav-main');
@@ -20,6 +22,7 @@
         lastScrollY = window.scrollY;
     });
   </script>
+
 <body>
     
     <div class="page-transition">
@@ -117,35 +120,8 @@
                     <h2 id="content-font"class="content-subheading">
                         Crop List
                     </h2>
-                    <div id="content-font"class="content-content">
-                        <table class="item-table">
-                            <tr class="content-text item-table-header-row">
-                                <td>Crop ID</td>
-                                <td>Genesis Name</td>
-                                <td>Rarity</td>
-                                <td>Category</td>
-                                <td>Cultives Ability</td>
-                                <td>Attribute Value</td>
-                                <td>Description</td>
-                            </tr>
-                            <tr class="content-text item-table-main-row">
-                                <td>1</td>
-                                <td>Crustcore</td>
-                                <td>Rudimentary</td>
-                                <td>Fungus</td>
-                                <td>Damage Reduction+</td>
-                                <td>+40% for 5s</td>
-                                <td>On kill, gain 40% damage reduction for 5s</td>
-                            </tr>
-                            <tr class="content-text item-table-main-row">
-                                <td>2</td>
-                                <td></td>
-                            </tr>
-                            <tr class="content-text item-table-main-row">
-
-                            </tr>
-
-                        </table>
+                    <!--To read from -->
+                    <div id="content-font"class="crop-table content-content">
                     </div> 
                 </div>
 
