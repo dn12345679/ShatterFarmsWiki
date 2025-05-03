@@ -1,0 +1,25 @@
+{
+    "table": [
+      {
+        "artifactID": 1,
+        "artifactName": "DodgePhase",
+        "rarity": "Rudimentary",
+        "type": "Scythe",
+        "description": "+0.25s Invulnerability time while dashing"
+      },
+      {
+        "artifactID": 2,
+        "artifactName": "DashCount",
+        "rarity": "Rudimentary",
+        "type": "Scythe",
+        "description": "+1 Bonus Scythe Dash"
+      },
+      {
+        "artifactID": 3,
+        "artifactName": "DashStrength",
+        "rarity": "Rudimentary",
+        "type": "Scythe",
+        "description": "+35% Dash Strength"
+      }
+    ]
+}

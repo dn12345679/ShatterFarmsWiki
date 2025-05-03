@@ -1,5 +1,5 @@
 {
-    "crops": [
+    "table": [
       {
         "cropID": 1,
         "genesisName": "Closer Thorn",
@@ -225,6 +225,17 @@
         "cultivesAbility": "Enhancement (Charge)", 
         "attributeValue": "+Movement Speed while stationary",
         "description": "Standing still slowly charges up movement speed"
+      },
+
+
+      {
+        "cropID": 26,
+        "genesisName": "  ",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Charge)", 
+        "attributeValue": "+Movement Speed while stationary",
+        "description": "Standing still slowly charges up movement speed"        
       }
     ]
   }
