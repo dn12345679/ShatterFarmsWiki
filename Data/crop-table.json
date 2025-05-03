@@ -5,8 +5,8 @@
         "genesisName": "Closer Thorn",
         "rarity": "Rudimentary",
         "category": "Cactus",
-        "cultivesAbility": "Summon (Thorn)",
-        "attributeValue": "+1 \"Thorn\"",
+        "cultivesAbility": "Damage (Thorn)",
+        "attributeValue": "\"Thorn\" Damage +25%",
         "description": "Spawn a Thorn when attacking an Enemy within 15m. CD: 3s"
       },
       {
@@ -24,8 +24,8 @@
         "rarity": "Rudimentary",
         "category": "Cactus",
         "cultivesAbility": "Summon (Hive)", 
-        "attributeValue": "+1 'Hive Nest'",
-        "description": "On Kill, Summon a Hive Nest that deals damage to both you and enemies."
+        "attributeValue": "+1 'Hive Nest', base 5 triggers, -50 Knockback",
+        "description": "On Kill, Summon a Hive Nest that deals damage to both you and enemies in an area"
       },
       {
         "cropID": 4,
@@ -33,7 +33,7 @@
         "rarity": "Rudimentary",
         "category": "Cactus",
         "cultivesAbility": "Damage (Explosion)", 
-        "attributeValue": "Death Damage +1500%",
+        "attributeValue": "Death Damage 15x +100%",
         "description": "Every 45s, The next kill Spawns a Devastating Blast."
       },
       {
@@ -50,8 +50,8 @@
         "genesisName": "Tetrabreak",
         "rarity": "Rudimentary",
         "category": "Cactus",
-        "cultivesAbility": "Shockwave Damage +500%", 
-        "attributeValue": "Damage (Shockwave)",
+        "cultivesAbility": "Damage (Shockwave)", 
+        "attributeValue": "Shockwave Damage 5x +100%",
         "description": "Slamming onto the ground causes a Shockwave"
       },
       {
@@ -115,7 +115,7 @@
         "rarity": "Rudimentary",
         "category": "Fungus",
         "cultivesAbility": "Defense (Blocked)", 
-        "attributeValue": "+Smoke and increased knockback",
+        "attributeValue": "+Smoke and +50% Knockback",
         "description": "While 'Slamming', generate a 'Smoke' that pushes enemies away slightly"
       },
       {
@@ -230,12 +230,57 @@
 
       {
         "cropID": 26,
-        "genesisName": "  ",
+        "genesisName": "Peony",
         "rarity": "Rudimentary",
         "category": "Lotus",
-        "cultivesAbility": "Enhancement (Charge)", 
-        "attributeValue": "+Movement Speed while stationary",
-        "description": "Standing still slowly charges up movement speed"        
+        "cultivesAbility": "Enhancement (Coagulate)", 
+        "attributeValue": "Take -100% Knockback every 5 seconds",
+        "description": "Occasionally, ignore a single instance of Enemy knockback effects"        
+      },
+      {
+        "cropID": 27,
+        "genesisName": "Unstable Cypress",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Damage (Rooted)", 
+        "attributeValue": "All Damage +100% while on ground",
+        "description": "Damage drastically increased, however the bonus is only applied while not airborne. Effect bonus decreaswes by 20% per second airborne."  
+      },
+      {
+        "cropID": 28,
+        "genesisName": "Unstable Columbine",
+        "rarity": "Rudimentary",
+        "category": "Cactus",
+        "cultivesAbility": "Damage (Altitude)", 
+        "attributeValue": "All Damage +50% while airborne",
+        "description": "Damage drastically increased, however the bonus is only applied while not on the ground. Effect bonus decreases by 10% per second on ground."   
+      },
+      {
+        "cropID": 29,
+        "genesisName": "Floral Imbuement",
+        "rarity": "Rudimentary",
+        "category": "Lotus",
+        "cultivesAbility": "Enhancement (Proficiency)", 
+        "attributeValue": "+1% Movement Speed per Mana above 0, +1% Jump Height per Mana below MAX",
+        "description": "Increased Movement Speed per Mana point. Increased Jump Height when using Mana"   
+      },
+      {
+        "cropID": 30,
+        "genesisName": "Dandelion",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Enhancement (Reinforcement)", 
+        "attributeValue": "Damage Taken -25% while jumping",
+        "description": "Damage Taken reduced while airborne, however the effect is paused while attacking."   
+      },
+      {
+        "cropID": 31,
+        "genesisName": "Turtledove",
+        "rarity": "Rudimentary",
+        "category": "Fungus",
+        "cultivesAbility": "Defense (Soften)", 
+        "attributeValue": "Projectiles or Melee attacks from slowed Enemies deal -10% Damage",
+        "description": "Incoming Damage Taken reduced from 'Slow' entities"   
       }
     ]
   }
