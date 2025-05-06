@@ -12,7 +12,6 @@ const header_list = [
     [
         'Artifact ID',
         'Artifact Name',
-        'Rarity',
         'Weapon Type',
         'Ability Description' 
     ]
@@ -31,7 +30,6 @@ const column_list = [
     [
         'artifactID',
         'artifactName',
-        'rarity',
         'type',
         'description'
     ]
