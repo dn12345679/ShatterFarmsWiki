@@ -2,140 +2,40 @@
     "table": [
       {
         "artifactID": 1,
-        "artifactName": "DodgePhase",
+        "artifactName": "Spectral Channeling",
         "type": "Scythe",
-        "description": "+0.25s Invulnerability time while dashing"
+        "description": "+0.25s Invulnerability time while dashing",
+        "aspects": "Momentum Replicate"
       },
       {
         "artifactID": 2,
-        "artifactName": "DashCount",
+        "artifactName": "Last Strike",
         "type": "Scythe",
-        "description": "+1 Bonus Scythe Dash"
+        "description": "+1 Bonus Scythe Dash",
+        "aspects": "Momentum Replicate"
       },
       {
         "artifactID": 3,
-        "artifactName": "DashStrength",
+        "artifactName": "",
         "type": "Scythe",
-        "description": "+35% Dash Strength"
+        "description": "+35% Dash Strength",
+        "aspects": "Momentum Replicate"
       },
-      {
-        "artifactID": 8,
-        "artifactName": "DashStrike",
-        "type": "Scythe",
-        "description": "Next attack deals +35% damage after a 'Dash' "
-      },
-      {
-        "artifactID": 9,
-        "artifactName": "Attack",
-        "type": "Scythe",
-        "description": "Deal +1% damage on hit based on Speed (incl. dash and slam speed)"
-      },
-      {
-        "artifactID": 18,
-        "artifactName": "Block",
-        "type": "Scythe",
-        "description": "Projectiles blocked by attack within 0.1s of initial cast deal double damage on return"
-      },
-
-
       {
         "artifactID": 4,
-        "artifactName": "Ricochet",
-        "type": "Hand",
-        "description": "Projectiles that hit environment ricochet in direction of nearest attacker"
+        "artifactName": "Clairvoyance",
+        "type": "Scythe",
+        "description": "+1% chance to ignore damage taken",
+        "aspects": "Momentum Replicate"
       },
       {
         "artifactID": 5,
-        "artifactName": "Split",
-        "type": "Hand",
-        "description": "Projectiles split in 2. "
-      },
-      {
-        "artifactID": 6,
-        "artifactName": "Pierce",
-        "type": "Hand",
-        "description": "Pierce +1 Enemy"
-      },
-      {
-        "artifactID": 7,
-        "artifactName": "Bounce",
-        "type": "Hand",
-        "description": "Projectiles bounce between enemies."
-      },
-      {
-        "artifactID": 10,
-        "artifactName": "Slow",
-        "type": "Hand",
-        "description": "All enemies hit by projectiles are slowed by X%"
-      },
-      {
-        "artifactID": 11,
-        "artifactName": "Speed",
-        "type": "Hand",
-        "description": "Hitting enemies increases movement speed by 1% for N seconds. Max X%."
-      },
-
-
-      {
-        "artifactID": 12,
-        "artifactName": "GrappleSpeed",
-        "type": "Rod",
-        "description": "Increase movement speed while grappling by X%"
-      },      
-      {
-        "artifactID": 13,
-        "artifactName": "PullSpeed",
-        "type": "Rod",
-        "description": "Enemies are pulled in faster"
-      },
-      {
-        "artifactID": 14,
-        "artifactName": "FirstStrike",
-        "type": "Rod",
-        "description": "Enemies reeled in by the Rod take 100% additional damage on the first attack"
-      },
-      {
-        "artifactID": 15,
-        "artifactName": "FishingNet",
-        "type": "Rod",
-        "description": "Take 25% less damage while grappling on environment"
-      },
-      {
-        "artifactID": 16,
-        "artifactName": "Catcher",
-        "type": "Rod",
-        "description": "Fishing rod can pull all enemies in a slightly larger AoE. Reeling speed decreased by N% per catch."
-      },
-      {
-        "artifactID": 17,
-        "artifactName": "",
-        "type": "Rod",
-        "description": "Projectiles split in 2. "
-      },
-
-      {
-        "artifactID": 19,
-        "artifactName": "Dual Wield",
-        "type": "All",
-        "description": "Each weapon deals +10% damage for 4 seconds in turn."
-      },
-      {
-        "artifactID": 20,
-        "artifactName": "Conglomerate",
-        "type": "All",
-        "description": "Dealing damage with Scythe restores mana slightly. Dealing damage with Mage restores Max HP very slightly."
-      },
-      {
-        "artifactID": 21,
-        "artifactName": "Synchronize",
-        "type": "All",
-        "description": ""
-      },
-      {
-        "artifactID": 22,
-        "artifactName": "Fall",
-        "type": "All",
-        "description": "  "
+        "artifactName": "DashStrength",
+        "type": "Scythe",
+        "description": "+35% Dash Strength",
+        "aspects": "Momentum Replicate"
       }
+      
+      
     ]
 }

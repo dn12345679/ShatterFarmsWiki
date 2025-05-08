@@ -1,0 +1,14 @@
+{
+    "table": [
+        {
+            "essenceCategory": "Essence of Suppression",
+            "essenceDescription": "Increases distance of 'Replication', but increases delay",
+            "parentArtifact": "Momentum Replicate"
+        },
+        {
+            "essenceCategory": "Essence of the Beneficiary",
+            "essenceDescription": "Adds an additional 'Artifact Slot'",
+            "parentArtifact": "All"
+        }
+    ]
+}
