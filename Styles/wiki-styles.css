@@ -123,15 +123,7 @@ html, body {
     border-style:inset; 
 }
 
-/* wiki page */
 
-.wiki-content {
-
-    z-index: 2;
-    height: auto;
-    display: flex;
-    position: relative;
-}
 
 /* wiki-scroll-content */
 
@@ -206,5 +198,31 @@ html, body {
     border-color: white;
 }
 
+
+
+/* Above content has been deprecated as of 6/1/2025 (old wiki_classic)*/
+body {
+  background-color: #4F4E68;
+}
+
+/* wiki page */
+
+.wiki-content {
+    display: grid;
+    margin:auto;
+    z-index: 2;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+
+
+
+/* icon-almanac */
+
+.icon-table {
+    width: 50%;
+    flex-wrap: wrap;
+}
 
 

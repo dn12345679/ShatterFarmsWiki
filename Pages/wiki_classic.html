@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="../Styles/wiki-styles.css"/>
+
+    <script src="../Scripts/json-to-table.js"></script> <!--IMPORTANT: Loads tables-->
+</head>
+<script>
+    const navbar = document.getElementsByClassName('nav-main');
+    let lastScrollY = window.scrollY;
+  
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 0) {
+            navbar[0].classList.add('hide');
+        }
+        else {
+            navbar[0].classList.remove('hide');
+        }
+        lastScrollY = window.scrollY;
+    });
+  </script>
+
+<body>
+    
+    <div class="page-transition">
+        <img src="../Assets/Background/black.jpg"/>
+    </div>
+    <nav class="nav-main">
+        <ul class="nav-main-header">
+            <li><a href="#"><img src="../Assets/Icons/pimbo.webp"/></a></li>
+            <li><a href="../index.html">ShatterFarms</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+        </ul>
+    </nav>
+    <div class="bg"></div>
+    <div class="wiki-content">
+        <div class="side-bar">
+
+            <nav class="nav-header-crop">
+                <h1 class="nav-header-crop-title">
+                    Crops
+                </h1>
+                <section>
+                    <ul class="topic-section" id="crop">
+                        <li><a class="subsection" href="#crops">Introduction to Crops</a></li>
+                        <li><a class="subsection" href="#crop-qualities">About Crop qualities</a></li>
+                        <li><a class="subsection" href="#crop-list">Crop List</a></li>
+                    </ul>
+                </section>
+                <h1 class="nav-header-crop-title">
+                    Artifacts
+                </h1>
+                <section>
+                    <ul class="topic-section" id="artifact">
+                        <li><a class="subsection" href="#artifacts">Introduction to Artifacts</a></li>
+                        <li><a class="subsection" href="#artifact-qualities">About Artifact qualities</a></li>
+                        <li><a class="subsection" href="#artifact-list">Artifact List</a></li>
+                    </ul>
+                </section>
+                <h1 class="nav-header-crop-title">
+                    Weapons
+                </h1>
+                <section>
+                    <ul class="topic-section" id="artifact">
+                        <li><a class="subsection" href="#">Introduction to Weapons</a></li>
+                        <li><a class="subsection" href="#">About Weapon qualities</a></li>
+                        <li><a class="subsection" href="#">Weapon List</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+        <div class="wiki-page-content">
+            <section class="wiki-section" id="crops">
+                <h1 id="content-font" class="content-heading">
+                    Crops
+                </h1>
+                <div>
+                    <h2 id="content-font"class="content-subheading">
+                        Introduction to Crops
+                    </h2>
+                    <div id="content-font"class="content-content">
+                        <p class="content-text">
+                            In Shatterfarms, a crop is a <i>Farmable</i> object that can provide
+                            bonuses to the harvesting player. In the game there are currently 2 
+                            variants of "Crops", 4 rarities per variant, 3 categories of each type.
+                            
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div id="crop-qualities">
+                    <h2 id="content-font"class="content-subheading">
+                        About Crop qualities and variants
+                    </h2>
+                    <div class="content-content">
+                        <p id="content-font"class="content-text">
+                            The 2 variants of "Crops" that exist are
+                            <b>Genesis</b>, and <b>Cultives</b>. <br>
+                            Genesis constitutes to the "Seeds" that can be planted in a farming plot
+                            by the player. The Genesis seeds can be grown into Cultives; which are the
+                            Items/bonuses that are received as a result of harvesting.
+
+                        </p>
+                        <p id="content-font" class="content-text">
+                            The 4 rarities of Crops that can be produced include:
+                            Rudimentary, Developed, Perfected, Calamity. <br>
+                        </p>
+                        <p id="content-font" class="content-text">
+                            The 3 categories of Crops that can be produced include:
+                            Fungus, Lotus, and Cactus<br>
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+                <div id="crop-list">
+                    <h2 id="content-font"class="content-subheading">
+                        Crop List
+                    </h2>
+                    <!--To read from -->
+                    <div id="content-font"class="crop-table content-content">
+                    </div> 
+                </div>
+
+            </section>
+
+
+
+            <section class="wiki-section" id="artifacts">
+                <h1 id="content-font"class="content-heading">
+                    Artifacts
+                </h1>
+                <div>
+                    <h2 id="content-font"class="content-subheading">
+                        Introduction to Artifacts
+                    </h2>
+                    <div class="content-content">
+                        <p id="content-font"class="content-text">
+                            In Shatterfarms, an Artifact is a ...
+                        </p>
+                    </div>
+                </div>       
+                <br>
+                <div id="artifact-qualities">
+                    <h2 id="content-font"class="content-subheading">
+                        About Artifact qualities and variants
+                    </h2>
+                    <div class="content-content">
+                        <p id="content-font"class="content-text">
+                            dfd
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <br>
+                <div id="artifact-list">
+                    <h2 id="content-font"class="content-subheading">
+                        Artifact List
+                    </h2>
+                    <!-- artifact -->
+                    <div id="content-font"class="artifact-table content-content">
+                    </div> 
+                </div>
+                
+            </section>
+        </div>
+    </div>
+
+
+    <footer class="footer" id="links">
+
+    </footer>
+</body>
+</html>

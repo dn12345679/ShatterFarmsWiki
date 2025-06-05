@@ -1,0 +1,95 @@
+/* === CSS RESET === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+/* Map CSS */
+
+.map-container {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    position: sticky;
+    border: 2px solid #333;
+
+    cursor: grab; /* style of cursor*/
+
+    /* bg but bigger */
+    
+    background-image: url(./Assets/background.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+
+}
+.map-inner {
+    position: absolute;
+    width: 4226px;
+    height: 3450px;
+    transform-origin: 0 0;
+
+    /* bg */
+    background-image: url(map_bg.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    
+
+
+    /* cursor */
+    cursor: grabbing;
+}
+
+
+
+/* Map Marker CSS */
+.map-marker {
+    position: absolute;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+.map-marker:hover{
+    transform:rotate(3deg);
+}
+
+
+
+.connection-line {
+    stroke: red;
+    stroke-width: 3;
+    stroke-dasharray: 5,5; /* Optional: makes it dashed */
+}

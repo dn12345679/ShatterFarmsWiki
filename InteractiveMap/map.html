@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="map_style.css" rel="stylesheet" type="text/css">
+    <title>Region Map</title>
+</head>
+
+
+
+<body>
+    <section class="map">
+        <div class="map-container">
+            <div class="map-inner">
+    <svg id="lineSvg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
+    </svg>
+                <div class="locations">
+                    <img src="./Assets/location1.png" class="map-marker" data-location="city1" style="top: 2000px; right: 1000px">
+                    <img src="./Assets/location2.png" class="map-marker" data-location="city2" style="top: 1000px; right: 3000px">
+                    <img src="./Assets/location3.jpg" class="map-marker" data-location="city3" style="top: 1200px; right: 500px">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="map.js"></script>
+</html>
