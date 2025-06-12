@@ -3,8 +3,8 @@ const mapContainer = document.querySelector('.map-container');
 let isDragging = false;
 let startX, startY, currentX = 0, currentY = 0;
 let currZoom = 1;
-const minZoom = 0.3;
-const maxZoom = 1.05;
+const minZoom = 0.6;
+const maxZoom = 1.5;
 const zoomStep = 0.05;
 const mWidth = 4226;
 const mHeight = 3450;
@@ -81,6 +81,7 @@ mapContainer.addEventListener('mousedown', (e) => {
     startX = e.clientX - currentX;
     startY = e.clientY - currentY;
     mapContainer.style.cursor = 'grabbing';
+
 });
 
 mapContainer.addEventListener('mousemove', (e) => {

@@ -202,7 +202,11 @@ html, body {
 
 /* Above content has been deprecated as of 6/1/2025 (old wiki_classic)*/
 body {
-  background-color: #4F4E68;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* wiki page */
@@ -225,4 +229,89 @@ body {
     flex-wrap: wrap;
 }
 
+
+
+/* deck animation */
+
+.deck-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+ 
+    justify-content: center;
+}
+
+.card {
+    position: absolute;
+    width: 20dvmin;
+    height: 15dvmax;
+    border-radius: 8px;
+    color: black;
+    background-color: white;
+
+    border-style: solid;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.deck-center {
+    transform: translateX(-50%);
+}
+
+.split .card:nth-child(odd) {
+    animation: spinLeft 0.8s linear forwards;
+    animation-delay: calc(var(--card-index, 0) * 50ms);
+}
+.split .card:nth-child(even) {
+    animation: spinRight 0.8s linear forwards;
+    animation-delay: calc(var(--card-index, 0) * 50ms + 10ms);
+}
+
+.split .card:hover{
+    scale: 1.05;
+}
+
+
+
+@keyframes spinLeft {
+    0% {
+        transform: translateX(0%) rotateY(0deg) rotateZ(0deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(50%) rotateY(180deg) rotateZ(180deg) scale(1.1);
+    }
+    100% {
+        transform: translateX(-100%) translateY(100%) rotateY(360deg) rotateZ(5deg) scale(1);
+    }
+}
+
+@keyframes spinRight {
+    0% {
+        transform: translateX(0%) rotateY(0deg) rotateZ(0deg);
+    }
+    50% {
+        transform: translateX(50%) translateY(50%) rotateY(-180deg) rotateZ(-180deg) scale(1.1);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotateY(-360deg) rotateZ(-5deg) scale(1);
+
+    }
+}
 

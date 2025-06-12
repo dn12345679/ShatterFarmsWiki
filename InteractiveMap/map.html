@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="map_style.css" rel="stylesheet" type="text/css">
+
     <title>Region Map</title>
 </head>
 
-
+<script>
+    const navbar = document.getElementsByClassName('nav-main');
+    let lastScrollY = window.scrollY;
+  
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 0) {
+            navbar[0].classList.add('hide');
+        }
+        else {
+            navbar[0].classList.remove('hide');
+        }
+        lastScrollY = window.scrollY;
+    });
+  </script>
 
 <body>
+
+    <nav class="nav-main">
+        <ul class="nav-main-header">
+            <li><a href="#"><img src="../Assets/Icons/pimbo.webp"/></a></li>
+            <li><a href="../index.html">ShatterFarms</a></li>
+            <li><a href="../Pages/wiki.html">Wiki</a></li>
+        </ul>
+    </nav>
+
     <section class="map">
         <div class="map-container">
             <div class="map-inner">

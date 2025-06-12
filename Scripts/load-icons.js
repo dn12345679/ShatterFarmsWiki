@@ -3,36 +3,45 @@
 // TEMPORARY DOES NOT WORK. WORKING ON FUNCTIONALITY FIRST
 var names;
 
-function loadData(path, tclass, pathjson = -1) {
+
+/*
+    path = image folder
+    tclass = table class for styling
+    pathjson = JSON data path, information to be loaded, IMPORTANT: must have columns of JSON file and headers to display for each category
+    placeholder = true/false if it is using the default icon or not
+*/
+function loadIcons(path, tclass, pathjson, placeholder) {
     
-    get_names(pathjson);
+
+    if (!placeholder){
+        console.log("yeah")
+        get_names(pathjson);    
+    }
+    
 
     const targetDiv = document.querySelector("." + tclass);
-    const table = document.createElement('table');
-    table.id = "content-font";
-    table.className = "icon-table";
+
+
+
     
     // TODO: fetch icons from .json, then open them by name:
-
+    const name = path + "/Question.webp"
     for (let i = 0; i < 40; i++) {
-        const name = path + "/Question.webp"
+        const card = document.createElement('div');
+        card.className = "card deck-center";
         const img = document.createElement('img');
         img.src = name;
-        table.appendChild(img)
+        card.appendChild(img);
+        targetDiv.appendChild(card);
+        console.log(card);
     }
-
-    
-    
-
-    targetDiv.appendChild(table);
-        
 
 };
 
 
 function get_names(pathjson){
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', path, true);
+    xhr.open('GET', pathjson, true);
     xhr.onload = function() {
 
         if (xhr.status === 200) {
@@ -46,8 +55,3 @@ function get_names(pathjson){
     
 };
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    loadData("../Assets/Icons/CultiveIcons", "icon-grid", "../Data/crop-table.json");
-
-});

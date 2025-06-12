@@ -1,3 +1,6 @@
+@import url('../Styles/global-styles.css');
+
+
 /* === CSS RESET === */
 *,
 *::before,
@@ -33,6 +36,50 @@ ul, ol {
   list-style: none;
 }
 
+
+/* navigation */
+
+/* NAVIGATION */
+.nav-main {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    font-family: 'Blackcraft', sans-serif;
+    font-size: 2vw;
+    height: fit-content;
+    transition: transform 0.3s ease;
+}
+.hide {
+    transform: translateY(-100%);
+}
+
+.nav-main-header {
+    background-color: #3F4A51;
+    transition: transform 0.3s ease;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+    
+    justify-content: space-around;
+    align-items: center;
+
+    height: 10vh;
+
+}
+.nav-main-header li {
+    min-width: 20px;
+    transform: scale(0.8);
+}
+.nav-main-header li a {
+    text-decoration: none;
+    color: #B124DB;
+    
+}
+.nav-main-header li a:hover {
+    color: #b124b1;
+}
 
 /* Map CSS */
 

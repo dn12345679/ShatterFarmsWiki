@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../Styles/wiki-styles.css"/>
 
     <script src="../Scripts/load-icons.js"></script> <!--IMPORTANT: Loads tables-->
+    <script src="../Scripts/json-to-table.js"></script>
+
+
 </head>
 <script>
     const navbar = document.getElementsByClassName('nav-main');
@@ -26,20 +29,34 @@
 <body>
     
     <div class="page-transition">
-        <img src="../Assets/Background/black.jpg"/>
+        <!--<img src="../Assets/Background/black.jpg"/>-->
     </div>
     <nav class="nav-main">
         <ul class="nav-main-header">
             <li><a href="#"><img src="../Assets/Icons/pimbo.webp"/></a></li>
             <li><a href="../index.html">ShatterFarms</a></li>
-            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="../InteractiveMap/map.html">World Map</a></li>
         </ul>
     </nav>
+    
+
+    <div class="deck-container">
+        <div id="view-crops" class="card deck-center">B</div>
+        <div id="view-artifacts" class="card deck-center">B</div>
+
+        <!--Contentless cards because they look cool-->
+        <div class="card deck-center">A</div>
+        <div class="card deck-center">A</div>
+        <div class="card deck-center">A</div>
+        <div class="card deck-center">A</div>
+        <div class="card deck-center">A</div>
+        <div class="card deck-center">A</div>            
+    </div>
 
     <div class="wiki-content">
         <div class="almanac">
-            <div class="icon-grid content-content"></div>
-            <!-- <div id="content-font"class="crop-table content-content"></div> -->
+            <!--<div class="icon-grid"></div>-->
+            <!--<div id="content-font"class="crop-table content-content"></div>-->
         </div>
     </div>
 
@@ -48,4 +65,39 @@
 
     </footer>
 </body>
+<script>
+
+    // start in center top, then spin
+    function set_initial() {
+        var cards = document.querySelector('.deck-container');
+        for (var i = 0; i < cards.children.length; i++) {
+            const element = cards.children[i];
+            
+            element.style.zIndex = `${(cards.children.length) - i}`;
+            element.style.top = `${50 + 2 * i}px`;
+            element.style.transform = `translateX(${-50 + 9 * i}px)`;
+
+            element.style.setProperty('--card-index', i)
+        }
+    };
+
+    function split_deck() {
+        const deck = document.querySelector('.deck-container');
+        deck.classList.add("split");
+        
+    }
+    
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        set_initial();
+        setTimeout(function() {
+            split_deck();
+        }, 1000);
+    });
+
+    document.getElementById("view-crops").addEventListener("click", function() {
+        window.location.href = "Subpages/wiki-crops.html"; 
+    });
+
+</script>
 </html>

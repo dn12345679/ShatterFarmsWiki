@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="../../Styles/wiki-styles.css"/>
+
+    <script src="../../Scripts/load-icons.js"></script> <!--IMPORTANT: Loads tables-->
+    <script src="../../Scripts/json-to-table.js"></script>
+
+
+</head>
+<script>
+    const navbar = document.getElementsByClassName('nav-main');
+    let lastScrollY = window.scrollY;
+  
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 0) {
+            navbar[0].classList.add('hide');
+        }
+        else {
+            navbar[0].classList.remove('hide');
+        }
+        lastScrollY = window.scrollY;
+    });
+  </script>
+
+<body>
+    
+    <div class="page-transition">
+        <!--<img src="../Assets/Background/black.jpg"/>-->
+    </div>
+    <nav class="nav-main">
+        <ul class="nav-main-header">
+            <li><a href="#"><img src="../../Assets/Icons/pimbo.webp"/></a></li>
+            <li><a href="../../index.html">ShatterFarms</a></li>
+            <li><a href="../../InteractiveMap/map.html">World Map</a></li>
+        </ul>
+    </nav>
+    
+    <div class="deck-container">
+        <div id="view-crops" class="card deck-center">B</div>
+    </div>
+
+    <div class="wiki-content">
+        <div class="almanac">
+            <div class="icon-grid deck-container"></div>
+            <!--<div id="content-font"class="crop-table content-content"></div>-->
+        </div>
+    </div>
+
+
+    <footer class="footer" id="links">
+
+    </footer>
+</body>
+<script>
+
+function set_initial() {
+    loadIcons(path="../../Assets/Icons/CultiveIcons", tclass = "icon-grid", pathjson = "../Data/crop-table.json", true);     
+    const deck = document.querySelector('.deck-container');
+    deck.classList.add("split");
+           
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    setTimeout(function() {
+        set_initial();
+    }, 1000);
+});
+
+
+</script>
+</html>

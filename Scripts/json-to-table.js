@@ -37,7 +37,11 @@ const column_list = [
     ]
 ];
 
-
+/*
+    path = JSON data path, information to be loaded, IMPORTANT: must have columns of JSON file and headers to display for each category
+    tclass = table class for styling
+    index = index of header/column in the arrays above. Must match JSON 
+*/
 function loadData(path, tclass, index) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', path, true);
@@ -71,6 +75,7 @@ function loadData(path, tclass, index) {
                 
                 column_list[index].forEach(key => {
                     const td = document.createElement('td');
+                    td.classList.add("card");
                     td.textContent = obj[key] || '';
                     row.appendChild(td);
                 });
@@ -83,9 +88,3 @@ function loadData(path, tclass, index) {
     }
     xhr.send();
 };
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    loadData("../Data/crop-table.json", "crop-table", 0);
-    loadData("../Data/artifact-table.json", "artifact-table", 1);
-});
