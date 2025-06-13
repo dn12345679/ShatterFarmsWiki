@@ -133,10 +133,11 @@ html, body {
     min-width: 100vw;
     min-height: 100vh;
     position: fixed;
-    /* background-image: url("../Assets/Background/wiki-bg.jpg"); */
+    background-image: url("../Assets/Background/wiki-bg.jpg"); 
     background-color: black;
     opacity: 0.8;
     background-repeat: repeat;
+    
 }
 
 .wiki-page-content {
@@ -239,9 +240,11 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: row;
- 
+    background-image: url('../Assets/Background/intro-bg.jpg');
     justify-content: center;
+
 }
+
 
 .card {
     position: absolute;
@@ -255,6 +258,9 @@ body {
 
     align-items: center;
     justify-content: center;
+    align-content: center;
+    display: flex;
+    font-size: 4dvmin;
 
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
@@ -276,11 +282,11 @@ body {
 }
 
 .split .card:nth-child(odd) {
-    animation: spinLeft 0.8s linear forwards;
+    animation: spinLeft 0.5s linear forwards;
     animation-delay: calc(var(--card-index, 0) * 50ms);
 }
 .split .card:nth-child(even) {
-    animation: spinRight 0.8s linear forwards;
+    animation: spinRight 0.5s linear forwards;
     animation-delay: calc(var(--card-index, 0) * 50ms + 10ms);
 }
 
@@ -315,3 +321,25 @@ body {
     }
 }
 
+
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) !important;  
+    grid-template-rows: repeat(5, 1fr) !important;     
+    gap: 8px;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.parallax-wrap img{
+    position: absolute;
+    height: 10dvmin;
+    width: 10dvmin;
+    z-index: inherit;
+}
+.parallax-wrap {
+    z-index: 999;
+}

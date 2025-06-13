@@ -6,11 +6,13 @@
     <title>Wiki</title>
     <link rel="stylesheet" href="../../Styles/wiki-styles.css"/>
 
-    <script src="../../Scripts/load-icons.js"></script> <!--IMPORTANT: Loads tables-->
+    <script type="module" src="../../Scripts/load-icons.js"></script> <!--IMPORTANT: Loads tables-->
     <script src="../../Scripts/json-to-table.js"></script>
 
 
+
 </head>
+
 <script>
     const navbar = document.getElementsByClassName('nav-main');
     let lastScrollY = window.scrollY;
@@ -24,7 +26,7 @@
         }
         lastScrollY = window.scrollY;
     });
-  </script>
+</script>
 
 <body>
     
@@ -45,7 +47,7 @@
 
     <div class="wiki-content">
         <div class="almanac">
-            <div class="icon-grid deck-container"></div>
+            <div id="icon-grid" class="deck-container"></div>
             <!--<div id="content-font"class="crop-table content-content"></div>-->
         </div>
     </div>
@@ -55,22 +57,20 @@
 
     </footer>
 </body>
-<script>
+<script type="module">
+import { loadIcons } from '/Scripts/load-icons.js';
+
+
 
 function set_initial() {
-    loadIcons(path="../../Assets/Icons/CultiveIcons", tclass = "icon-grid", pathjson = "../Data/crop-table.json", true);     
+    loadIcons("/Assets/Icons/CultiveIcons", "icon-grid", "/Data/crop-table.json", true);
+    
     const deck = document.querySelector('.deck-container');
     deck.classList.add("split");
-           
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    
-    setTimeout(function() {
-        set_initial();
-    }, 1000);
+    set_initial();
 });
-
-
 </script>
 </html>

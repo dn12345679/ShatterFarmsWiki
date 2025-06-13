@@ -1,4 +1,4 @@
-
+import './infocard.js';
 
 // TEMPORARY DOES NOT WORK. WORKING ON FUNCTIONALITY FIRST
 var names;
@@ -11,32 +11,23 @@ var names;
     placeholder = true/false if it is using the default icon or not
 */
 function loadIcons(path, tclass, pathjson, placeholder) {
-    
-
-    if (!placeholder){
-        console.log("yeah")
+    if (!placeholder) {
+        console.log("Loading from JSON");
         get_names(pathjson);    
     }
     
-
-    const targetDiv = document.querySelector("." + tclass);
-
-
-
+    const targetDiv = document.querySelector("#" + tclass);
     
-    // TODO: fetch icons from .json, then open them by name:
-    const name = path + "/Question.webp"
+    // Create 40 cards
     for (let i = 0; i < 40; i++) {
-        const card = document.createElement('div');
-        card.className = "card deck-center";
-        const img = document.createElement('img');
-        img.src = name;
-        card.appendChild(img);
+        const card = document.createElement('info-card');
+        card.setAttribute('fontpath', '/Assets/Font/Blackcraft.ttf');
+        card.setAttribute('icon', '/Assets/Icons/CultiveIcons/Question.webp');
+        card.setAttribute('text', `Card ${i + 1}`);
+        
         targetDiv.appendChild(card);
-        console.log(card);
     }
-
-};
+}
 
 
 function get_names(pathjson){
@@ -55,3 +46,4 @@ function get_names(pathjson){
     
 };
 
+export { loadIcons };

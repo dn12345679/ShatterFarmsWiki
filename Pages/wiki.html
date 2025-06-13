@@ -24,10 +24,48 @@
         }
         lastScrollY = window.scrollY;
     });
+
+
+    // adds particles for the parallax effect in the section mainpage
+    function addParticles(count) {
+        const pwrap = document.querySelector('.parallax-wrap');
+        for (let i = 0; i < count; i++) {
+            var p = document.createElement('img');
+            var sizex = Math.random() * window.innerWidth * 0.8;
+            var sizey = Math.random() * window.innerHeight * 0.8;
+            
+            p.setAttribute('value', (Math.random() * 2 - 1) * 20);
+            p.style.left = sizex + 'px';
+            p.style.top = sizey + 'px';
+            p.style.zIndex = Math.floor(Math.random() * -1); // random num between 0, 1, or 2
+            p.src = "/Assets/Icons/pimbo.webp"
+            p.style.pointerEvents = "none";
+            
+
+            pwrap.appendChild(p);
+        }
+    }
+0    
+    // https://dev.to/clementgaudiniere/create-a-parallax-effect-when-the-mouse-moves-3km0
+    
+    function parallax(event) {
+        this.querySelectorAll('.parallax-wrap img').forEach((shift) => {
+            const position = shift.getAttribute("value");
+            const x = (window.innerWidth - event.pageX * position) / 90;
+            const y = (window.innerHeight - event.pageY * position) / 90;
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`; 
+        });
+    }
+
+    window.onload = function() {
+        addParticles(20);
+        
+        document.addEventListener("mousemove", parallax); // paralax
+    };
   </script>
 
 <body>
-    
+     <div class="parallax-wrap"></div>
     <div class="page-transition">
         <!--<img src="../Assets/Background/black.jpg"/>-->
     </div>
@@ -41,8 +79,8 @@
     
 
     <div class="deck-container">
-        <div id="view-crops" class="card deck-center">B</div>
-        <div id="view-artifacts" class="card deck-center">B</div>
+        <div id="view-crops" class="card deck-center"><div>Cultives</div></div>
+        <div id="view-artifacts" class="card deck-center">Artifacts</div>
 
         <!--Contentless cards because they look cool-->
         <div class="card deck-center">A</div>
@@ -92,7 +130,7 @@
         set_initial();
         setTimeout(function() {
             split_deck();
-        }, 1000);
+        }, 500);
     });
 
     document.getElementById("view-crops").addEventListener("click", function() {
