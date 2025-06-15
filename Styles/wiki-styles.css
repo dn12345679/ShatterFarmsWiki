@@ -262,8 +262,11 @@ body {
     display: flex;
     font-size: 4dvmin;
 
+    
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
+
+    z-index: 10;
     
 }
 
@@ -296,6 +299,8 @@ body {
 
 
 
+
+
 @keyframes spinLeft {
     0% {
         transform: translateX(0%) rotateY(0deg) rotateZ(0deg);
@@ -304,7 +309,7 @@ body {
         transform: translateX(-50%) translateY(50%) rotateY(180deg) rotateZ(180deg) scale(1.1);
     }
     100% {
-        transform: translateX(-100%) translateY(100%) rotateY(360deg) rotateZ(5deg) scale(1);
+        transform: translateX(-150%) translateY(100%) rotateY(360deg) rotateZ(5deg) scale(1);
     }
 }
 
@@ -316,7 +321,7 @@ body {
         transform: translateX(50%) translateY(50%) rotateY(-180deg) rotateZ(-180deg) scale(1.1);
     }
     100% {
-        transform: translateX(100%) translateY(100%) rotateY(-360deg) rotateZ(-5deg) scale(1);
+        transform: translateX(150%) translateY(100%) rotateY(-360deg) rotateZ(-5deg) scale(1);
 
     }
 }
@@ -334,6 +339,7 @@ body {
     box-sizing: border-box;
 }
 
+/* pl*mbos */
 .parallax-wrap img{
     position: absolute;
     height: 10dvmin;
@@ -341,5 +347,5 @@ body {
     z-index: inherit;
 }
 .parallax-wrap {
-    z-index: 999;
+    z-index: 1;
 }

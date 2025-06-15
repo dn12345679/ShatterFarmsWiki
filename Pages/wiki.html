@@ -79,16 +79,16 @@
     
 
     <div class="deck-container">
-        <div id="view-crops" class="card deck-center"><div>Cultives</div></div>
-        <div id="view-artifacts" class="card deck-center">Artifacts</div>
+        <div id="view-crops" class="card deck-center main A">Cultives</div>
+        <div id="view-artifacts" class="card deck-center main B">Artifacts</div>
 
         <!--Contentless cards because they look cool-->
-        <div class="card deck-center">A</div>
-        <div class="card deck-center">A</div>
-        <div class="card deck-center">A</div>
-        <div class="card deck-center">A</div>
-        <div class="card deck-center">A</div>
-        <div class="card deck-center">A</div>            
+        <div class="card deck-center A"><img src="../Assets/Icons/CultivePlaceholder/CultiveCactus.png"></div>
+        <div class="card deck-center B"><img src="../Assets/Icons/ArtifactPlaceholder/BlindedSlice.png"></div>
+        <div class="card deck-center A"><img src="../Assets/Icons/CultivePlaceholder/CultiveFungus.png"></div>
+        <div class="card deck-center B"><img src="../Assets/Icons/ArtifactPlaceholder/BreakCharge.png"></div>
+        <div class="card deck-center A"><img src="../Assets/Icons/CultivePlaceholder/CultiveLotus.png"></div>
+        <div class="card deck-center B"><img src="../Assets/Icons/ArtifactPlaceholder/CounterBash.png"></div>            
     </div>
 
     <div class="wiki-content">
@@ -123,8 +123,86 @@
         const deck = document.querySelector('.deck-container');
         deck.classList.add("split");
         
+    }   
+
+
+
+    // hacky way to animate an already animated object with animation forwards
+
+    // get the sign based on the card class name
+    function helperGetSign(card) {
+        if (card.classList.contains('A')) {
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+
+    // clean and add a new transform according the the value in newTransform
+    function addTransformString(element, newTransform) {
+        const current = element.style.transform || '';
+        
+        
+        const transformType = newTransform.split('(')[0]; 
+        const regex = new RegExp(`${transformType}\\([^)]*\\)\\s*`, 'g');
+        const cleaned = current.replace(regex, '').trim();
+        
+        // add the new transform
+        element.style.transform = cleaned ? `${cleaned} ${newTransform}` : newTransform;
+    }
+
+    // simply replace from the substring
+    function removeTransformString(element, transformType) {
+        const current = element.style.transform || '';
+        const regex = new RegExp(`${transformType}\\([^)]*\\)\\s*`, 'g');
+        element.style.transform = current.replace(regex, '').trim();
     }
     
+
+    function rotate_family(card) {
+        const family = Array.from(card.classList)[3];
+        document.querySelectorAll(`.card.deck-center.${family}`).forEach(card => {
+            if (!card.classList.contains('main')) {
+                const shortestDimension = Math.min(window.innerWidth, window.innerHeight);
+                const index = parseInt(card.style.getPropertyValue('--card-index')) || 0;
+                addTransformString(card, `rotateZ(${helperGetSign(card) * index * 5}deg)`);
+                addTransformString(card, `translateX(${helperGetSign(card) * index * shortestDimension *0.05}px)`)
+            }
+
+        });
+    }
+
+    function reset_family(card) {
+        const family = Array.from(card.classList)[3];
+        document.querySelectorAll(`.card.${family}`).forEach(card => {
+            if (!card.classList.contains('main')) {
+                removeTransformString(card, 'rotateZ');
+                removeTransformString(card, 'translateX')
+            }
+        });
+    }
+
+
+    // everythi else
+
+
+
+    document.querySelectorAll('.card').forEach(card => {
+        // "hacky" way to use forwards animation fill mode while allowing post-animation
+        card.addEventListener('animationend', function() {
+            const computedStyle = getComputedStyle(card);
+            card.style.transform = computedStyle.transform;
+            card.style.animation = 'none';
+            document.querySelectorAll('.card.main').forEach(card => {
+                card.addEventListener('mouseenter', () => rotate_family(card));
+                card.addEventListener('mouseleave', () => reset_family(card));
+            });
+        })
+    })
+    
+
+
     
     document.addEventListener("DOMContentLoaded", function () {
         set_initial();
