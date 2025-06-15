@@ -38,7 +38,7 @@ html, body {
     justify-content: space-around;
     align-items: center;
 
-    height: 10vh;
+    height: 10dvmin;
 
 }
 .nav-main-header li {
@@ -134,9 +134,12 @@ html, body {
     min-height: 100vh;
     position: fixed;
     background-image: url("../Assets/Background/wiki-bg.jpg"); 
+    margin-top: 10dvmin;
     background-color: black;
     opacity: 0.8;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     
 }
 
@@ -240,9 +243,9 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-image: url('../Assets/Background/intro-bg.jpg');
-    justify-content: center;
 
+    justify-content: center;
+    
 }
 
 
@@ -297,7 +300,10 @@ body {
     scale: 1.05;
 }
 
-
+.card-icon {
+    width: 20dvmin;
+    height: 20dvmin;
+}
 
 
 
@@ -327,13 +333,13 @@ body {
 }
 
 
-
-.icon-grid {
+/* for the wiki-crops and info-card galleries. Note that info-card styles are in the .js file*/
+#icon-grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr) !important;  
-    grid-template-rows: repeat(5, 1fr) !important;     
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  
     gap: 8px;
     padding: 20px;
+
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;

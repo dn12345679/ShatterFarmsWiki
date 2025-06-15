@@ -83,27 +83,32 @@
         <div id="view-artifacts" class="card deck-center main B">Artifacts</div>
 
         <!--Contentless cards because they look cool-->
-        <div class="card deck-center A"><img src="../Assets/Icons/CultivePlaceholder/CultiveCactus.png"></div>
-        <div class="card deck-center B"><img src="../Assets/Icons/ArtifactPlaceholder/BlindedSlice.png"></div>
-        <div class="card deck-center A"><img src="../Assets/Icons/CultivePlaceholder/CultiveFungus.png"></div>
-        <div class="card deck-center B"><img src="../Assets/Icons/ArtifactPlaceholder/BreakCharge.png"></div>
-        <div class="card deck-center A"><img src="../Assets/Icons/CultivePlaceholder/CultiveLotus.png"></div>
-        <div class="card deck-center B"><img src="../Assets/Icons/ArtifactPlaceholder/CounterBash.png"></div>            
+        <div class="card deck-center A"><img class="card-icon" src="../Assets/Icons/CultivePlaceholder/CultiveCactus.png"></div>
+        <div class="card deck-center B"><img class="card-icon" src="../Assets/Icons/ArtifactPlaceholder/BlindedSlice.png"></div>
+        <div class="card deck-center A"><img class="card-icon" src="../Assets/Icons/CultivePlaceholder/CultiveFungus.png"></div>
+        <div class="card deck-center B"><img class="card-icon" src="../Assets/Icons/ArtifactPlaceholder/BreakCharge.png"></div>
+        <div class="card deck-center A"><img class = "card-icon" src="../Assets/Icons/CultivePlaceholder/CultiveLotus.png"></div>
+        <div class="card deck-center B"><img class = "card-icon" src="../Assets/Icons/ArtifactPlaceholder/CounterBash.png"></div>            
     </div>
 
+    <!-- ** temporarily removed since I no longer have the wiki on the main page
     <div class="wiki-content">
         <div class="almanac">
-            <!--<div class="icon-grid"></div>-->
-            <!--<div id="content-font"class="crop-table content-content"></div>-->
+            <div class="icon-grid"></div>
+            <div id="content-font"class="crop-table content-content"></div>
         </div>
     </div>
+    -->
 
 
     <footer class="footer" id="links">
 
     </footer>
 </body>
-<script>
+
+
+
+<script id="wiki-page-effects">
 
     // start in center top, then spin
     function set_initial() {
@@ -111,6 +116,7 @@
         for (var i = 0; i < cards.children.length; i++) {
             const element = cards.children[i];
             
+
             element.style.zIndex = `${(cards.children.length) - i}`;
             element.style.top = `${50 + 2 * i}px`;
             element.style.transform = `translateX(${-50 + 9 * i}px)`;
@@ -167,7 +173,8 @@
                 const shortestDimension = Math.min(window.innerWidth, window.innerHeight);
                 const index = parseInt(card.style.getPropertyValue('--card-index')) || 0;
                 addTransformString(card, `rotateZ(${helperGetSign(card) * index * 5}deg)`);
-                addTransformString(card, `translateX(${helperGetSign(card) * index * shortestDimension *0.05}px)`)
+                addTransformString(card, `translateX(${helperGetSign(card) * index * shortestDimension *0.02}px)`)
+                card.style.opacity = 1 - 0.1 * index;
             }
 
         });
@@ -179,6 +186,7 @@
             if (!card.classList.contains('main')) {
                 removeTransformString(card, 'rotateZ');
                 removeTransformString(card, 'translateX')
+                card.style.opacity = 1;
             }
         });
     }
@@ -190,6 +198,7 @@
 
     document.querySelectorAll('.card').forEach(card => {
         // "hacky" way to use forwards animation fill mode while allowing post-animation
+        card.style.pointerEvents = 'none';
         card.addEventListener('animationend', function() {
             const computedStyle = getComputedStyle(card);
             card.style.transform = computedStyle.transform;
@@ -197,6 +206,7 @@
             document.querySelectorAll('.card.main').forEach(card => {
                 card.addEventListener('mouseenter', () => rotate_family(card));
                 card.addEventListener('mouseleave', () => reset_family(card));
+                card.style.pointerEvents = 'auto';
             });
         })
     })

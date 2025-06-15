@@ -18,6 +18,8 @@ class InfoCard extends HTMLElement {
             }
                
             .card {
+                margin-top: 10dvmin;
+
                 width: 100%;
                 height: 100%;
                 border-radius: 8px;
@@ -46,9 +48,11 @@ class InfoCard extends HTMLElement {
                 height: min(32px, 30%);
                 margin-bottom: 8px;
                 object-fit: contain;
+                pointer-events: none;
             }
             
             span {
+                margin-top:
                 font-size: clamp(8px, 1.5vw, 14px);
                 text-align: center;
                 font-family: 'CustomFont', sans-serif;
@@ -57,7 +61,14 @@ class InfoCard extends HTMLElement {
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
+                max-height: 100%;
                 pointer-events: none;
+            }
+            div {
+                margin-top: 10dvmin;
+                min-width: 20dvmin;
+                max-height: 15dvmax;
+                pointer-events: auto;
             }
             </style>
             <div class="card">

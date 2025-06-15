@@ -41,9 +41,7 @@
         </ul>
     </nav>
     
-    <div class="deck-container">
-        <!--<div id="view-crops" class="card deck-center"></div>-->
-    </div>
+    <div class="bg"></div>
 
     <div class="wiki-content">
         <div class="almanac">
@@ -58,19 +56,19 @@
     </footer>
 </body>
 <script type="module">
-import { loadIcons } from '/Scripts/load-icons.js';
+    import { loadIcons } from '/Scripts/load-icons.js';
 
 
 
-function set_initial() {
-    loadIcons("/Assets/Icons/CultiveIcons", "icon-grid", "/Data/crop-table.json", true);
-    
-    const deck = document.querySelector('.deck-container');
-    deck.classList.add("split");
-}
+    function set_initial() {
+        loadIcons("/Assets/Icons/CultiveIcons", "icon-grid", "/Data/crop-table.json", true);
+        
+        const deck = document.querySelector('.deck-container');
+        deck.classList.add("split");
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-    set_initial();
-});
+    document.addEventListener("DOMContentLoaded", function () {
+        set_initial();
+    });
 </script>
 </html>
