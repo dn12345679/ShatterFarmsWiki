@@ -7,8 +7,8 @@
 }
 html, body {
     overflow-x: hidden;
+    display : flex;
     scroll-behavior: smooth;
-
     font-family: 'SpecialElite', sans-serif;
 }
 
@@ -335,19 +335,109 @@ body {
 
 /* for the wiki-crops and info-card galleries. Note that info-card styles are in the .js file*/
 #icon-grid {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  
-    gap: 8px;
-    padding: 20px;
-
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-
+    grid-template-columns: repeat(auto-fit, minmax(20dvmin, 1fr));  
+    grid-template-rows: repeat(auto-fit, minmax(15dvmax, 1fr));
+ 
     
-
-    padding-top: 10dvmin;
+    max-width: 40vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 20dvmin;
+    padding-left: 1dvmin;
 }
+
+.page-description {
+    min-width: 50vw;
+    height: 100vh;
+}
+
+info-card {
+    max-width: fit-content;
+}
+
+/* journal/book */
+
+.book {
+    position: fixed;
+    top: 12dvmin;
+    right: 43dvmax;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    
+    perspective: 1000px;
+    
+    
+}
+
+.book.hover .cover {
+    transform: rotateX(10deg) rotateY(-180deg);
+    pointer-events: none;
+    
+    
+}
+
+.cover {
+    z-index: 1;
+    transition: all 1s;
+}
+.back-cover {
+    z-index: -1;
+}
+
+.cover,
+.back-cover {
+    top: 1dvmin;
+    height: 78dvmin;
+    width: 30dvmax;
+
+    background-image: url('../Assets/Background/black-leather.jpg');
+    filter: contrast(1.2) brightness(0.78);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+
+    border-radius: 10px;
+    position: absolute;
+
+    transform: rotateX(10deg);
+    transform-origin: center left;
+}
+
+.page {
+    top: 3dvmin;
+    border-radius: 10px;
+    height: 75dvmin;
+    width: 28dvmax;
+    background-image: url('../InteractiveMap/map_bg.jpg');
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    position: absolute;
+
+    transform: rotateX(10deg);
+}
+
+.page:nth-child(2) {
+    transition-duration: 3s;
+}
+.page:nth-child(3) {
+    transition-duration: 2.6s;
+}
+.page:nth-child(4) {
+    transition-duration: 2.2s;
+}
+
+
+
+.almanac {
+    z-index: 2;
+}
+
+
 
 /* pl*mbos */
 .parallax-wrap img{

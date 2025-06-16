@@ -13,6 +13,11 @@
 
 </head>
 
+<style>
+    
+    /* override body*/
+</style>
+
 <script>
     const navbar = document.getElementsByClassName('nav-main');
     let lastScrollY = window.scrollY;
@@ -48,8 +53,20 @@
             <div id="icon-grid" class="deck-container"></div>
             <!--<div id="content-font"class="crop-table content-content"></div>-->
         </div>
+        <div class="page-description">
+            <div class="book">
+                <div class="cover">
+                    <div class="page"></div>    
+                </div>
+                <div class="page">Placeholder NoText</div>
+                <div class="page">Placeholder NoText</div>
+                <div class="page">
+                    
+                </div>
+                <div class="back-cover"></div>
+            </div>
+        </div>
     </div>
-
 
     <footer class="footer" id="links">
 
@@ -59,6 +76,21 @@
     import { loadIcons } from '/Scripts/load-icons.js';
 
 
+    document.querySelector('.book').addEventListener("mouseenter", function() {
+        toggle_cover(true);
+    });
+    document.querySelector('.book').addEventListener("mouseleave", function() {
+        toggle_cover(false);
+    });
+
+    function toggle_cover(isEntering) {
+        const cover = document.querySelector('.book');
+        if (isEntering) {
+            cover.classList.add('hover'); // No dot in classList methods
+        } else {
+            cover.classList.remove('hover');
+        }
+    }
 
     function set_initial() {
         loadIcons("/Assets/Icons/CultiveIcons", "icon-grid", "/Data/crop-table.json", true);

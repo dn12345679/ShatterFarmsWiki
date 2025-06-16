@@ -24,6 +24,7 @@ function loadIcons(path, tclass, pathjson, placeholder) {
         card.setAttribute('fontpath', '/Assets/Font/Blackcraft.ttf');
         card.setAttribute('icon', '/Assets/Icons/CultiveIcons/Question.webp');
         card.setAttribute('text', `Card ${i + 1}`);
+        card.setAttribute('rarity', 'perfected');
         
         targetDiv.appendChild(card);
     }
