@@ -3,7 +3,7 @@
       {
         "cropID": 1,
         "genesisName": "Closer Thorn",
-        "rarity": "Rudimentary",
+        "rarity": "Calamity",
         "category": "Cactus",
         "cultivesAbility": "Damage (Thorn)",
         "attributeValue": "\"Thorn\" Damage +25%",
@@ -21,7 +21,7 @@
       {
         "cropID": 3,
         "genesisName": "Hive Slicer",
-        "rarity": "Rudimentary",
+        "rarity": "Developed",
         "category": "Cactus",
         "cultivesAbility": "Summon (Hive)", 
         "attributeValue": "+1 'Hive Nest', base 5 triggers, -50 Knockback",
@@ -39,7 +39,7 @@
       {
         "cropID": 5,
         "genesisName": "Streak of Willows",
-        "rarity": "Rudimentary",
+        "rarity": "Perfected",
         "category": "Cactus",
         "cultivesAbility": "Damage (Weakness)", 
         "attributeValue": "All Damage +15%, All Damage -50% for 15s after taking damage",
@@ -67,7 +67,7 @@
       {
         "cropID": 8,
         "genesisName": "Anti Spores",
-        "rarity": "Rudimentary",
+        "rarity": "Calamity",
         "category": "Fungus",
         "cultivesAbility": "Defense (Slowness)", 
         "attributeValue": "Spores: Slow Enemies by 50% per stack. Enemy Armor reduces on contact. Effect duration: 6s",
@@ -76,7 +76,7 @@
       {
         "cropID": 9,
         "genesisName": "Blue Capillary",
-        "rarity": "Rudimentary",
+        "rarity": "Calamity",
         "category": "Fungus",
         "cultivesAbility": "Defense (Absorption)", 
         "attributeValue": "Absorb 10% All Damage as Mana Damage",
@@ -85,7 +85,7 @@
       {
         "cropID": 10,
         "genesisName": "Crust Core",
-        "rarity": "Rudimentary",
+        "rarity": "Calamity",
         "category": "Fungus",
         "cultivesAbility": "Defense (Adaptation)", 
         "attributeValue": "+40% Damage Reduction on Kill. Duration: 5s",
@@ -157,7 +157,7 @@
       {
         "cropID": 18,
         "genesisName": "Flutter Kicks",
-        "rarity": "Rudimentary",
+        "rarity": "Developed",
         "category": "Lotus",
         "cultivesAbility": "Enhancement (Divekick)", 
         "attributeValue": "+1 Midair Jump",
@@ -166,7 +166,7 @@
       {
         "cropID": 19,
         "genesisName": "Mage Leaf",
-        "rarity": "Rudimentary",
+        "rarity": "Developed",
         "category": "Lotus",
         "cultivesAbility": "Enhancement (Power)", 
         "attributeValue": "Max Mana recovered +100%, Increase Max Mana by 10%",
@@ -184,7 +184,7 @@
       {
         "cropID": 21,
         "genesisName": "Purple Waters",
-        "rarity": "Rudimentary",
+        "rarity": "Calamity",
         "category": "Fungus",
         "cultivesAbility": "Defense (Slowness)", 
         "attributeValue": "Projectile Slowing Field",
@@ -211,7 +211,7 @@
       {
         "cropID": 24,
         "genesisName": "Watercress Connection",
-        "rarity": "Rudimentary",
+        "rarity": "Calamity",
         "category": "Lotus",
         "cultivesAbility": "Enhancement (Conservation)", 
         "attributeValue": "+15% Mana Efficiency",
@@ -258,7 +258,7 @@
       {
         "cropID": 29,
         "genesisName": "Floral Imbuement",
-        "rarity": "Rudimentary",
+        "rarity": "Perfected",
         "category": "Lotus",
         "cultivesAbility": "Enhancement (Proficiency)", 
         "attributeValue": "+1% Movement Speed per Mana above 0, +1% Jump Height per Mana below MAX",
@@ -267,7 +267,7 @@
       {
         "cropID": 30,
         "genesisName": "Dandelion",
-        "rarity": "Rudimentary",
+        "rarity": "Perfected",
         "category": "Fungus",
         "cultivesAbility": "Enhancement (Reinforcement)", 
         "attributeValue": "Damage Taken -25% while jumping",
@@ -276,7 +276,7 @@
       {
         "cropID": 31,
         "genesisName": "Turtledove",
-        "rarity": "Rudimentary",
+        "rarity": "Perfected",
         "category": "Fungus",
         "cultivesAbility": "Defense (Soften)", 
         "attributeValue": "Projectiles or Melee attacks from slowed Enemies deal -10% Damage",

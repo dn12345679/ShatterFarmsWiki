@@ -50,8 +50,15 @@
 
     <div class="wiki-content">
         <div class="almanac">
-            <div id="icon-grid" class="deck-container"></div>
-            <!--<div id="content-font"class="crop-table content-content"></div>-->
+            <div class="sort-menu">
+                <div id = "category" class="sort-item" >Sort by Type</div>
+                <div id = "rarity" class="sort-item">Sort by Rarity</div>
+            </div>
+
+            <!-- Cards initialized in here-->
+            <div id="icon-grid" class="deck-container"> 
+
+            </div>
         </div>
         <div class="page-description">
             <div class="book">
@@ -61,7 +68,8 @@
                 <div class="page">Placeholder NoText</div>
                 <div class="page">Placeholder NoText</div>
                 <div class="page">
-                    
+                    <!-- item description updated here -->
+                    <h2 class="item-description">Hello there</h2>
                 </div>
                 <div class="back-cover"></div>
             </div>
@@ -74,6 +82,18 @@
 </body>
 <script type="module">
     import { loadIcons } from '/Scripts/load-icons.js';
+    import { loadDescription} from '/Scripts/load-info.js'
+
+
+    /* adds animation to individual chars */
+    document.querySelectorAll('.item-description').forEach(el => {
+        const text = el.textContent;
+        el.innerHTML = text.split('').map((char, i) => 
+        char === ' ' ? ' ' : `<span class="char" style="animation-delay: ${i * 0.05}s">${char}</span>`)
+        .join('');
+        
+    });
+
 
 
     document.querySelector('.book').addEventListener("mouseenter", function() {
@@ -92,11 +112,34 @@
         }
     }
 
+
+    /*
+
+        Ordering system:
+            cropID = 1 - N,
+            
+            order by: Rarity
+                - The crops are ordered by rarity A, B, C ASCII value
+                - Then they are ordered numerically by their cropID
+            
+            order by: Category
+                - The crops are ordered by category A, B, C, D ASCII value ('switch' by category)
+                - Then they are ordered numerically by their cropID
+            
+    */
+    const rarity_button = document.getElementById('rarity');
+    const category_button = document.getElementById('category');
+    rarity_button.addEventListener('click', () => {
+        loadIcons("", "icon-grid", "/Data/crop-table.json", "rarity");
+    })
+    category_button.addEventListener('click', () => {
+        loadIcons("", "icon-grid", "/Data/crop-table.json", "category");
+    })
+
+
     function set_initial() {
-        loadIcons("/Assets/Icons/CultiveIcons", "icon-grid", "/Data/crop-table.json", true);
-        
-        const deck = document.querySelector('.deck-container');
-        deck.classList.add("split");
+        loadIcons("", "icon-grid", "/Data/crop-table.json", "category");
+        loadDescription('default');
     }
 
     document.addEventListener("DOMContentLoaded", function () {

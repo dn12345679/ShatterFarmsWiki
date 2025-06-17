@@ -238,14 +238,31 @@ body {
 /* deck animation */
 
 .deck-container {
-    position: relative;
+    
     width: 100vw;
-    height: 100vh;
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     
+}
+.sort-menu {
+    position: absolute;
+    top: 12dvmin;
+    background-color: aliceblue;
+    width: 40dvmax;
+    height: 5dvmin;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.sort-item {
+    margin: 1dvmin;
 }
 
 
@@ -418,7 +435,14 @@ info-card {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     position: absolute;
 
+    display: flex;
     transform: rotateX(10deg);
+}
+
+/* text */
+.page h2 {
+    margin: 10dvmin;
+    color: white;
 }
 
 .page:nth-child(2) {
@@ -436,6 +460,26 @@ info-card {
 .almanac {
     z-index: 2;
 }
+
+.sort-item:hover{
+    transform: scale(2);
+}
+
+/* animated descriptions */
+.char {
+    display: inline-block;
+    animation: snapRotate 1.2s infinite ease-in-out;
+    transform-origin: center;
+}
+@keyframes snapRotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
 
 
 

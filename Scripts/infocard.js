@@ -1,11 +1,37 @@
+import { loadDescription} from '/Scripts/load-info.js'
+
 class InfoCard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'});
+
+        
+
+        this.shadowRoot.addEventListener('click', (e) => {
+            this.toggle_cover();
+            loadDescription(this.getAttribute('description'));
+            
+        });
+        this.shadowRoot.addEventListener('mouseout', (e) => {
+            const cover = document.querySelector('.book');
+            if (cover.classList.contains('hover')) {
+                cover.classList.remove('hover');
+            }
+        });
+    }
+
+    toggle_cover() {
+        const cover = document.querySelector('.book');
+        
+        if (!cover.classList.contains('hover')) {
+            cover.classList.add('hover'); // No dot in classList methods
+        } else {
+            cover.classList.remove('hover');
+        }
     }
 
     extractRarityColor(rarity) {
-        switch (rarity){
+        switch (rarity.toLowerCase()){
             case 'rudimentary':
                 return '#c4c4c4';
             case 'developed':
@@ -16,19 +42,36 @@ class InfoCard extends HTMLElement {
                 return '#fa282f';
         }
     }
+    extractCategory(category) {
+        switch(category.toLowerCase()) {
+            case 'cactus':
+                return '/Assets/Icons/CultivePlaceholder/CultiveCactus.png';
+            case 'lotus':
+                return '/Assets/Icons/CultivePlaceholder/CultiveLotus.png';
+            case 'fungus':
+                return '/Assets/Icons/CultivePlaceholder/CultiveFungus.png';
+        }
+    }
+
+
    
     connectedCallback() {
+
         const fontPath = this.getAttribute('fontpath') || 'default-font.ttf';
         const icon = this.getAttribute('icon') || 'default-icon.png';
         const text = this.getAttribute('text') || 'Default text';
         const rarity = this.getAttribute('rarity') || 'rudimentary';
+        const category = this.getAttribute('category') || 'cactus';
+
+        const description = this.getAttribute('description') || 'default description';
        
         this.shadowRoot.innerHTML = `
             <style>
             @font-face {
-                font-family: 'CustomFont';
+                font-family: 'BlackCraft';
                 src: url(${fontPath});
             }
+
                
             .card {
                 width: 22dvmin;
@@ -61,7 +104,7 @@ class InfoCard extends HTMLElement {
             
             .card-face {
                 display: flex;
-
+                
                 justify-content: center;
                 align-items: center;
                 width: 20dvmin;
@@ -72,36 +115,51 @@ class InfoCard extends HTMLElement {
                 background-color: white;
                 border: 2px solid #333;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 
+                pointer-events: auto;
                 
             }
             
             
            
-            img {
-                width: 1dvmin;
+            .icon {
+                width: 10dvmin;
                 height: 10dvmin;
                 margin-bottom: 8px;
                 object-fit: contain;
                 pointer-events: none;
             }
+            .category {
+                width: 10dvmin;
+                height: 10dvmin;
+                pointer-events: none;
+                position: absolute;
+                opacity: 0.2;
+                margin-top: 15dvmin;
+                margin-left: 10dvmin;
+            }
            
             span {
-                font-size: clamp(8px, 1.5vw, 14px);
+                font-size: clamp(8px, 1vw, 14px);
                 text-align: center;
                 font-family: 'CustomFont', sans-serif;
                 word-break: break-word;
                 pointer-events: none;
                 padding: 8px;
             }
+
+            h1 {
+                pointer-events: none;
+            }
             </style>
             <div class="card">
                 <div class="card-face">
-                    <img src="${icon}" alt="icon">
-                    <span>${text}</span>
+                    <img class="icon" src="${icon}" alt="icon">
+                    <h1>${text}</h1>
+                    <img class="category" src="${this.extractCategory(category)}" alt="category">
                 </div>
             </div>
         `;
