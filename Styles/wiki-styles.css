@@ -468,15 +468,16 @@ info-card {
 /* animated descriptions */
 .char {
     display: inline-block;
-    animation: snapRotate 1.2s infinite ease-in-out;
+    animation: snapRotate 2s infinite linear;
     transform-origin: center;
 }
 @keyframes snapRotate {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(15deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-15deg); }
-    100% { transform: rotate(0deg); }
+
+    0% { transform: none; }
+    25% { transform: rotate(15deg) scale(1.3) translate(3px, 1px); }
+    50% { transform: rotate(0deg) scale(1.56) translate(-3px, -1px); }
+    75% { transform: rotate(-15deg) scale(1.3) translate(2px, 4px); }
+    100% { transform: rotate(0deg) scale(1.1) translate(-2px, -4px); }
 }
 
 

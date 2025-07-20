@@ -14,6 +14,12 @@ function get_table(pathjson, callback){
 function loadDescription(description) {
     let text_element = document.querySelector('.item-description');
     text_element.textContent = description || 'default';
+    document.querySelectorAll('.item-description').forEach(el => {
+        const text = el.textContent;
+        el.innerHTML = text.split('').map((char, i) => 
+        char === ' ' ? ' ' : `<span class="char" style="animation-delay: ${i * 0.05}s">${char}</span>`)
+        .join('');
+    });
 }
 
 export {loadDescription }
